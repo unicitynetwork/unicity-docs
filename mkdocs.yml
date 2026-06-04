@@ -7,6 +7,7 @@ copyright: Unicity Labs
 
 theme:
   name: material
+  logo: assets/logo.svg
   font:
     text: Geist
     code: Geist Mono
