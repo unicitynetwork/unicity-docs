@@ -1,0 +1,71 @@
+name: Build and deploy docs
+
+on:
+  # Rebuild when this repo changes (config, landing pages, workflow).
+  push:
+    branches: [main]
+  # Rebuild daily so upstream repo changes are picked up with no manual action.
+  schedule:
+    - cron: "0 5 * * *"
+  # Allow a manual rebuild from the Actions tab.
+  workflow_dispatch:
+  # Optional: let source repos trigger an immediate rebuild.
+  # A source repo would send a repository_dispatch event of this type.
+  repository_dispatch:
+    types: [upstream-docs-updated]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Only one deploy at a time; cancel superseded runs.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      # multirepo plugin reads this to clone the source repos in CI.
+      # The default GITHUB_TOKEN can read public repos across orgs.
+      GithubAccessToken: ${{ secrets.GITHUB_TOKEN }}
+      # Silence the Material for MkDocs / MkDocs 2.0 incompatibility banner.
+      NO_MKDOCS_2_WARNING: "1"
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Build site
+        run: mkdocs build
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

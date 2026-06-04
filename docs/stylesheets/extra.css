@@ -1,0 +1,28 @@
+/* Unicity brand color: #FF6F00 */
+:root {
+  --unicity-orange: #FF6F00;
+  --unicity-orange-dark: #E56400;
+}
+
+[data-md-color-primary="custom"] {
+  --md-primary-fg-color: var(--unicity-orange);
+  --md-primary-fg-color--light: #ff8a33;
+  --md-primary-fg-color--dark: var(--unicity-orange-dark);
+}
+
+[data-md-color-accent="custom"] {
+  --md-accent-fg-color: var(--unicity-orange);
+}
+
+/* Links use the brand color in both schemes */
+.md-typeset a {
+  color: var(--unicity-orange);
+}
+.md-typeset a:hover {
+  color: var(--unicity-orange-dark);
+}
+
+/* Slightly tighter heading rhythm */
+.md-typeset h1 {
+  font-weight: 700;
+}
