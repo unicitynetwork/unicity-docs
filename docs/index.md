@@ -1,4 +1,4 @@
-# Unicity Docs
+# Unicity Docs Portal
 
 Documentation for the Unicity stack: the protocol layer, the AgentSphere wallet and SDK, and the AgentStack agent runtime.
 
