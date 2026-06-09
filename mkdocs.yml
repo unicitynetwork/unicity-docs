@@ -145,8 +145,14 @@ nav:
   - AgentStack:
       - AstridOS:
           - Overview: astrid/README.md
+          - The Astrid Book: https://unicity-astrid.github.io/book/
+          - The Contributor Handbook: https://unicity-astrid.github.io/handbook/
           - Configuration: astrid/docs/config.md
           - SDK Ergonomics: astrid/docs/sdk-ergonomics.md
           - Gateway Client: astrid/docs/gateway-client.md
           - Gateway Deployment: astrid/docs/gateway-deployment.md
           - Metrics: astrid/docs/metrics.md
+          - Repositories:
+              - astrid (kernel): https://github.com/unicity-astrid/astrid
+              - sdk-rust: https://github.com/unicity-astrid/sdk-rust
+              - sdk-js: https://github.com/unicity-astrid/sdk-js
