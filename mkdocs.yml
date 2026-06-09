@@ -144,7 +144,8 @@ nav:
           - Wallet Import / Export: sphere/docs/WALLET-IMPORT-EXPORT.md
   - AgentStack:
       - AstridOS:
-          - Overview: astrid/README.md
+          - Overview: agentstack/astrid.md
+          - Kernel README: astrid/README.md
           - The Astrid Book: https://unicity-astrid.github.io/book/
           - The Contributor Handbook: https://unicity-astrid.github.io/handbook/
           - Configuration: astrid/docs/config.md
