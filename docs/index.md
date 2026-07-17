@@ -24,7 +24,7 @@ This site aggregates documentation from across the Unicity GitHub organizations.
 
 ## Source repositories
 
-| Layer | Repository |
+| Component | Repository |
 | --- | --- |
 | Protocol papers | [unicitynetwork/whitepaper](https://github.com/unicitynetwork/whitepaper) and related |
 | State Transition SDK (JS) | [unicitynetwork/state-transition-sdk-js](https://github.com/unicitynetwork/state-transition-sdk-js) |
