@@ -88,7 +88,6 @@ plugins:
             - docs/QUICKSTART-BROWSER.md
             - docs/QUICKSTART-CLI.md
             - docs/INTEGRATION.md
-            - docs/L1-ALPHA.md
             - docs/UNICITY-ID.md
             - docs/API.md
             - docs/PROVIDERS-AND-CONFIG.md
@@ -128,7 +127,6 @@ nav:
           - Quickstart (Browser): sphere/docs/QUICKSTART-BROWSER.md
           - Quickstart (CLI): sphere/docs/QUICKSTART-CLI.md
           - Integration Guide: sphere/docs/INTEGRATION.md
-          - L1 (ALPHA): sphere/docs/L1-ALPHA.md
           - Unicity ID: sphere/docs/UNICITY-ID.md
           - API Reference: sphere/docs/API.md
           - Providers & Config: sphere/docs/PROVIDERS-AND-CONFIG.md
