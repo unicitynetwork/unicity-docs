@@ -18,7 +18,7 @@ This site aggregates documentation from across the Unicity GitHub organizations.
 
 -   __AgentStack__
 
-    The agent operating system and guard layer. A capsule-based Rust microkernel for running AI agents under capability control. See [AstridOS](astrid/README.md).
+    The operating system and guard runtime for AI agents. A capsule-based Rust microkernel for running agents under capability control. See [AstridOS](astrid/README.md).
 
 </div>
 
