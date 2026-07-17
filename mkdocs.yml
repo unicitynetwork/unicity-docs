@@ -1,5 +1,5 @@
 site_name: Docs Portal
-site_description: Documentation for the Unicity Protocol, AgentSphere, and AgentStack.
+site_description: Documentation for the Unicity Protocol, AgentSphere, and Unicity AOS.
 site_url: https://unicitynetwork.github.io/unicity-docs/
 repo_url: https://github.com/unicitynetwork/unicity-docs
 repo_name: unicitynetwork/unicity-docs
@@ -58,8 +58,6 @@ markdown_extensions:
       alternate_style: true
   - pymdownx.emoji
 
-# Keep the build resilient: report problems, do not fail the build on
-# cross-repo relative links that point at source files we did not import.
 validation:
   nav:
     omitted_files: ignore
@@ -101,15 +99,12 @@ plugins:
             - docs/IDENTITY-CRYPTO.md
             - docs/IPFS-STORAGE.md
             - docs/WALLET-IMPORT-EXPORT.md
-        - name: astrid
-          import_url: https://github.com/unicity-astrid/astrid?branch=main
+        - name: aos
+          import_url: https://github.com/unicity-aos/aos-ce?branch=main
           imports:
             - /README.md
-            - docs/config.md
-            - docs/sdk-ergonomics.md
-            - docs/gateway-client.md
-            - docs/gateway-deployment.md
-            - docs/metrics.md
+            - docs/release-channels.md
+            - docs/runtime-migration.md
 
 nav:
   - Home: index.md
@@ -141,17 +136,12 @@ nav:
           - Token Backup (IPFS): sphere/docs/IPFS-STORAGE.md
           - Wallet Import / Export: sphere/docs/WALLET-IMPORT-EXPORT.md
   - AgentStack:
-      - AstridOS:
+      - Unicity AOS:
           - Overview: agentstack/astrid.md
-          - Kernel README: astrid/README.md
-          - The Astrid Book: https://unicity-astrid.github.io/book/
-          - The Contributor Handbook: https://unicity-astrid.github.io/handbook/
-          - Configuration: astrid/docs/config.md
-          - SDK Ergonomics: astrid/docs/sdk-ergonomics.md
-          - Gateway Client: astrid/docs/gateway-client.md
-          - Gateway Deployment: astrid/docs/gateway-deployment.md
-          - Metrics: astrid/docs/metrics.md
+          - README: aos/README.md
+          - Release Channels: aos/docs/release-channels.md
+          - Runtime Migration: aos/docs/runtime-migration.md
           - Repositories:
-              - astrid (kernel): https://github.com/unicity-astrid/astrid
-              - sdk-rust: https://github.com/unicity-astrid/sdk-rust
-              - sdk-js: https://github.com/unicity-astrid/sdk-js
+              - AOS Community Edition: https://github.com/unicity-aos/aos-ce
+              - Capsule Authoring: https://github.com/unicity-aos/capsule-forge
+              - All AOS Repositories: https://github.com/unicity-aos
