@@ -1,6 +1,6 @@
 # Unicity Docs Portal
 
-Documentation for the Unicity stack: the protocol layer, the AgentSphere wallet and SDK, and the AgentStack agent runtime.
+Documentation for the Unicity stack: the protocol, the AgentSphere wallet and SDK, and the AgentStack agent runtime.
 
 This site aggregates documentation from across the Unicity GitHub organizations. Each section is pulled directly from its source repository at build time, so the content here tracks the upstream repos automatically.
 
@@ -10,7 +10,7 @@ This site aggregates documentation from across the Unicity GitHub organizations.
 
 -   __Unicity Protocol__
 
-    The settlement layer. Proof-of-work L1, BFT finality and aggregation at L2, and an off-chain token layer at L3. Start with the [overview](protocol/index.md) and the [research papers](protocol/research-papers.md).
+    The settlement network for machine-speed commerce. Assets move directly between parties as self-contained bearer objects that carry their own proof of validity. Start with the [overview](protocol/index.md) and the [research papers](protocol/research-papers.md).
 
 -   __AgentSphere__
 
