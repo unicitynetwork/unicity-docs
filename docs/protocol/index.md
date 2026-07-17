@@ -1,16 +1,12 @@
 # Unicity Protocol
 
-Unicity is a settlement layer for machine-speed commerce. Assets are self-contained bearer objects that carry their own proof of validity and move directly between parties, rather than rows in a global database that validators take turns updating.
+Unicity is a settlement network for machine-speed commerce. Assets are self-contained bearer objects that carry their own proof of validity and move directly between parties, rather than rows in a global database that validators take turns updating.
 
-## Architecture
+## How it works
 
-The protocol is organized in three layers:
+A Unicity proof is a non-inclusion proof: it demonstrates that a commitment has not been spent. Transaction commitments are batched by the aggregator into a sparse Merkle tree, and a token's validity is proven against that tree. Because ownership is proven rather than looked up in a shared ledger, assets can change hands directly between parties without a global state update on every transfer.
 
-- __L1 — Proof of Work.__ The base chain.
-- __L2 — BFT finality and aggregation.__ Byzantine fault-tolerant finality on top of L1, plus the aggregator that batches transaction commitments into a sparse Merkle tree.
-- __L3 — Token layer.__ Off-chain tokens whose validity is proven against the aggregator. A Unicity proof is a non-inclusion proof: it demonstrates a commitment has not been spent.
-
-For the formal treatment of each layer, see the [research papers](research-papers.md). For the developer-facing token API, see the [State Transition SDK (JS)](../stsdk/README.md).
+For the formal treatment, see the [research papers](research-papers.md). For the developer-facing token API, see the [State Transition SDK (JS)](../stsdk/README.md).
 
 ## Where to go next
 
