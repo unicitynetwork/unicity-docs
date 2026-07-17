@@ -135,13 +135,12 @@ nav:
           - Identity & Crypto: sphere/docs/IDENTITY-CRYPTO.md
           - Token Backup (IPFS): sphere/docs/IPFS-STORAGE.md
           - Wallet Import / Export: sphere/docs/WALLET-IMPORT-EXPORT.md
-  - AgentStack:
-      - Unicity AOS:
-          - Overview: agentstack/astrid.md
-          - README: aos/README.md
-          - Release Channels: aos/docs/release-channels.md
-          - Runtime Migration: aos/docs/runtime-migration.md
-          - Repositories:
-              - AOS Community Edition: https://github.com/unicity-aos/aos-ce
-              - Capsule Authoring: https://github.com/unicity-aos/capsule-forge
-              - All AOS Repositories: https://github.com/unicity-aos
+  - Unicity AOS:
+      - Overview: agentstack/astrid.md
+      - README: aos/README.md
+      - Release Channels: aos/docs/release-channels.md
+      - Runtime Migration: aos/docs/runtime-migration.md
+      - Repositories:
+          - AOS Community Edition: https://github.com/unicity-aos/aos-ce
+          - Capsule Authoring: https://github.com/unicity-aos/capsule-forge
+          - All AOS Repositories: https://github.com/unicity-aos
