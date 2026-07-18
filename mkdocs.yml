@@ -58,13 +58,19 @@ markdown_extensions:
       alternate_style: true
   - pymdownx.emoji
 
+# CI runs `mkdocs build --strict`, so any WARNING fails the build.
+# nav.not_found stays at WARNING: if an upstream repo removes or renames a file
+# we import, CI goes red instead of silently publishing dead nav links (404s).
+# Link/anchor issues inside imported READMEs are demoted to INFO: they point at
+# source files in their own repos, are not fixable from here, and must not block
+# deploys. They remain visible in the build log.
 validation:
   nav:
     omitted_files: ignore
     not_found: warn
   links:
-    not_found: warn
-    anchors: warn
+    not_found: info
+    anchors: info
 
 plugins:
   - search
