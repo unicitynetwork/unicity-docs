@@ -83,11 +83,6 @@ plugins:
       cleanup: true
       keep_docs_dir: true
       nav_repos:
-        - name: stsdk
-          import_url: https://github.com/unicitynetwork/state-transition-sdk-js?branch=main
-          imports:
-            - /README.md
-            - /unicity-token-protocol-spec.md
         - name: sphere
           import_url: https://github.com/unicity-sphere/sphere-sdk?branch=main
           imports:
@@ -111,9 +106,6 @@ nav:
   - Unicity Protocol:
       - Overview: protocol/index.md
       - Research Papers: protocol/research-papers.md
-      - State Transition SDK (JS):
-          - Overview: stsdk/README.md
-          - Token Protocol Spec: stsdk/unicity-token-protocol-spec.md
   - AgentSphere:
       - Sphere SDK:
           - Overview: sphere/README.md
