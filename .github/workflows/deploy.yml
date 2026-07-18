@@ -51,8 +51,12 @@ jobs:
       - name: Configure Pages
         uses: actions/configure-pages@v5
 
-      - name: Build site
-        run: mkdocs build
+      # --strict turns MkDocs warnings into errors. If an upstream repo removes
+      # or renames a file listed in the nav, this step fails and nothing is
+      # deployed, so the live site keeps serving the last good build instead of
+      # publishing dead nav links. Fix the imports/nav in mkdocs.yml to go green.
+      - name: Build site (strict)
+        run: mkdocs build --strict
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
