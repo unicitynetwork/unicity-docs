@@ -72,6 +72,11 @@ validation:
     not_found: info
     anchors: info
 
+# Rewrites relative links in imported READMEs (source files, .env.example, test
+# fixtures) to absolute GitHub URLs so they resolve instead of 404ing.
+hooks:
+  - hooks/github_links.py
+
 plugins:
   - search
   - multirepo:
