@@ -27,6 +27,5 @@ This site aggregates documentation from across the Unicity GitHub organizations.
 | Component | Repository |
 | --- | --- |
 | Protocol papers | [unicitynetwork/whitepaper](https://github.com/unicitynetwork/whitepaper) and related |
-| State Transition SDK (JS) | [unicitynetwork/state-transition-sdk-js](https://github.com/unicitynetwork/state-transition-sdk-js) |
 | Sphere SDK | [unicity-sphere/sphere-sdk](https://github.com/unicity-sphere/sphere-sdk) |
 | Unicity AOS | [unicity-aos/aos-ce](https://github.com/unicity-aos/aos-ce) |

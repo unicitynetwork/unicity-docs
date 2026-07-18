@@ -14,7 +14,6 @@ import re
 
 # nav prefix -> (owner/repo, branch)
 REPOS = {
-    "stsdk/": ("unicitynetwork/state-transition-sdk-js", "main"),
     "sphere/": ("unicity-sphere/sphere-sdk", "main"),
     "aos/": ("unicity-aos/aos-ce", "main"),
 }
