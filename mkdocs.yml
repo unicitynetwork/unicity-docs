@@ -59,21 +59,26 @@ markdown_extensions:
   - pymdownx.emoji
 
 # CI runs `mkdocs build --strict`, so any WARNING fails the build.
-# nav.not_found stays at WARNING: if an upstream repo removes or renames a file
-# we import, CI goes red instead of silently publishing dead nav links (404s).
-# Link/anchor issues inside imported READMEs are demoted to INFO: they point at
-# source files in their own repos, are not fixable from here, and must not block
-# deploys. They remain visible in the build log.
+#   nav.not_found   = warn -> an upstream repo removing/renaming a file we import
+#                     turns CI red instead of publishing dead nav links (404s).
+#   links.not_found = warn -> a body-text link that resolves to nothing also fails.
+#                     hooks/github_links.py first rewrites links that point at
+#                     files in the source repo, so what reaches this check is a
+#                     genuine dead link, not an upstream source-file reference.
+#   links.anchors   = info -> missing #anchors inside imported READMEs are
+#                     cosmetic (the page still loads) and are owned upstream,
+#                     so they must not block a deploy.
 validation:
   nav:
     omitted_files: ignore
     not_found: warn
   links:
-    not_found: info
+    not_found: warn
     anchors: info
 
 # Rewrites relative links in imported READMEs (source files, .env.example, test
-# fixtures) to absolute GitHub URLs so they resolve instead of 404ing.
+# fixtures, and .md files we do not import) to absolute GitHub URLs so they
+# resolve instead of 404ing.
 hooks:
   - hooks/github_links.py
 
@@ -98,6 +103,7 @@ plugins:
           import_url: https://github.com/unicity-aos/aos-ce?branch=main
           imports:
             - /README.md
+            - docs/meta-harness.md
             - docs/release-channels.md
             - docs/runtime-migration.md
 
@@ -119,6 +125,7 @@ nav:
   - Unicity AOS:
       - Overview: agentstack/astrid.md
       - README: aos/README.md
+      - Extending an Agent's World: aos/docs/meta-harness.md
       - Release Channels: aos/docs/release-channels.md
       - Runtime Migration: aos/docs/runtime-migration.md
       - Repositories:
