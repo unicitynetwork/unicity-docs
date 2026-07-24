@@ -41,6 +41,16 @@ theme:
 extra_css:
   - stylesheets/extra.css
 
+extra:
+  homepage: https://unicity.network
+  social:
+    - icon: fontawesome/solid/globe
+      link: https://unicity.network
+      name: Unicity Platform
+    - icon: fontawesome/solid/robot
+      link: https://www.unicity.ai
+      name: Unicity AOS
+
 markdown_extensions:
   - admonition
   - attr_list
